@@ -35,6 +35,7 @@ shape_input = input("Enter a name of a shape from the following: \ncircle\nrecta
 
 if shape_input == "circle":
     circle_edit = input("Do you want to edit the circle's properties? ")
+
     if circle_edit == "yes":
         radius_Input = int(input("radius: "))
         width_input = int(input("width: "))
@@ -64,6 +65,7 @@ if shape_input == "circle":
 
 elif shape_input == "rectangle":
     rectangle_edit = input("Do you want to edit the rectangle's properties? ")
+
     if rectangle_edit == "yes":
         width = int(input("breadth: "))
         height = int(input("height: "))
@@ -88,6 +90,7 @@ elif shape_input == "rectangle":
 
 elif shape_input == "square":
     square_edit = input("Do you want to edit the square's properties? ")
+    
     if square_edit == "yes":
         side = float(input("side lenght: "))
         width = int(input("width: "))
