@@ -94,11 +94,30 @@ elif shape_input == "square":
     if square_edit == "yes":
         side = float(input("side lenght: "))
         width = int(input("width: "))
+
+        while side != width:
+            print("error: Invalid dimensions for square")
+            print("try again......")
+            side = float(input("side lenght: "))
+            width = int(input("width: "))
+
         color_edit()
         pygame.draw.rect(DISPLAYSURF, shape_color, (400, 300, side, side), width)
+        see_shape_properties = input("Do you want to seee the shape's properties? ")
+
+        if see_shape_properties == "yes":
+            area = side * width
+            print("area: ", area)
 
     elif square_edit == "no":
-        pygame.draw.rect(DISPLAYSURF, (255, 255, 255), (400, 300, 150, 150), 10)
+        width = 150
+        height = 150
+        pygame.draw.rect(DISPLAYSURF, (255, 255, 255), (400, 300, width, height), 10)
+        see_shape_properties = input("Do you want to seee the shape's properties? ")
+
+        if see_shape_properties == "yes":
+            area = width * height
+            print("area: ", area)
 
 elif shape_input == "parallelogram":
     parallelogram_edit = input("Do you want to edit the parallelogram's properties?")
